@@ -64,7 +64,7 @@ app.use('/images', express.static('upload/images'))
 app.post("/upload", upload.single('product'), (req, res) => {
     res.json({
         success: 1,
-        image_url: `https://e-commerce-backendd-0y49.onrender.com/images/product_17123456789.jpg`
+        image_url: `https://e-commerce-backendd-0y49.onrender.com/images/${req.file.filename}`
     })
 })
 
