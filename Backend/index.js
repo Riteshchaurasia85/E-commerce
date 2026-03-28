@@ -10,7 +10,9 @@ const cors = require('cors');
 // const { error } = require('console');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: 'https://e-commerce-frontendd-vmjq.onrender.com',
+}));
 
 // Database Connection With MongoDB
 // mongoose.connect("mongodb+srv://satyamst260:satyam2000@cluster0.ekjdpse.mongodb.net/e-commerce")||mongoose.connect("mongodb://0.0.0.0:27017/practicee-commerce")
